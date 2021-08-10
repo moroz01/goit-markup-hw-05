@@ -61,7 +61,7 @@
           ЭФФЕКТИВНЫЕ РЕШЕНИЯ<br />
           ДЛЯ ВАШЕГО БИЗНЕСА
         </h1>
-        <button type="button" class="button-primary">Заказать услугу</button>
+        <button type="button" class="button-primary" data-modal-open>Заказать услугу</button>
       </section>
       <!-- feature list -->
       <section class="section">
@@ -122,12 +122,21 @@
           <ul class="works-list">
             <li class="works-list-item">
               <a href="#"><img src="./images/pic1.jpg" alt="Пример работ1" width="370" /></a>
+              <div class="works-list-overlay">
+                <p class="works-list-text">ДЕСКТОПНЫЕ ПРИЛОЖЕНИЯ</p>
+              </div>
             </li>
             <li class="works-list-item">
               <a href="#"><img src="./images/pic2.jpg" alt="Пример работ2" width="370" /></a>
+              <div class="works-list-overlay">
+                <p class="works-list-text">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</p>
+              </div>
             </li>
             <li class="works-list-item">
               <a href="#"><img src="./images/pic3.jpg" alt="Пример работ3" width="370" /></a>
+              <div class="works-list-overlay">
+                <p class="works-list-text">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -380,6 +389,31 @@
         </div>
       </div>
     </footer>
-    <script></script>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-close" type="button" data-modal-close>
+          <svg class="modal-icon" width="18" height="18">
+            <use href="./images/close1.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- <script>
+      (() => {
+        const refs = {
+          openModalBtn: document.querySelector('[data-modal-open]'),
+          closeModalBtn: document.querySelector('[data-modal-close]'),
+          modal: document.querySelector('[data-modal]'),
+        };
+
+        refs.openModalBtn.addEventListener('click', toggleModal);
+        refs.closeModalBtn.addEventListener('click', toggleModal);
+
+        function toggleModal() {
+          refs.modal.classList.toggle('is-hidden');
+        }
+      })();
+    </script> -->
+    <script src="./js/modal.js"></script>
   </body>
 </html>
